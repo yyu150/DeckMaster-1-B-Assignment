@@ -1,0 +1,34 @@
+@model DeckMaster.ViewModels.UserRoleVM
+@{ ViewData["Title"] = "Assign Role to User"; }
+
+<h1>Assign Role to User</h1>
+<hr />
+
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+    
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Email" class="form-label">Select User</label>
+        <select asp-for="Email" asp-items="ViewBag.UserSelectList" class="form-select">
+            <option value="">-- Select User --</option>
+        </select>
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="RoleName" class="form-label">Select Role</label>
+        <select asp-for="RoleName" asp-items="ViewBag.RoleSelectList" class="form-select">
+            <option value="">-- Select Role --</option>
+        </select>
+        <span asp-validation-for="RoleName" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Assign Role</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to User List</a>
+</form>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

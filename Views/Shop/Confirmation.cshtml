@@ -1,0 +1,18 @@
+@model global::DeckMaster.Models.Transaction
+
+
+@{
+    ViewData["Title"] = "Payment Confirmation";
+}
+
+<h1>Payment Successful</h1>
+
+<p><strong>Transaction ID:</strong> @Model.TransactionId</p>
+<p><strong>Amount Paid:</strong> @Model.Amount @Model.Currency</p>
+<p><strong>Payer Name:</strong> @Model.PayerName</p>
+<p><strong>Payer Email:</strong> @Model.PayerEmail</p>
+<p><strong>Date:</strong> @Model.CreatedAt.ToString("yyyy-MM-dd HH:mm")</p>
+
+<a asp-controller="Shop" asp-action="Index" class="btn btn-primary">
+    Back to Shop
+</a>

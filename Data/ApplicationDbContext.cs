@@ -3,10 +3,15 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
+using DeckMaster.Models;
+
+
+
 namespace DeckMaster.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
+        public DbSet<Transaction> Transactions { get; set; } = default!;
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

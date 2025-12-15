@@ -1,0 +1,121 @@
+@model IEnumerable<DeckMaster.Models.Transaction>
+
+@{
+    ViewData["Title"] = "Transactions";
+
+    string searchEmail = ViewBag.SearchEmail as string ?? "";
+    string sortField = ViewBag.SortField as string ?? "date";
+    string sortDir = ViewBag.SortDir as string ?? "desc";
+    int page = ViewBag.Page ?? 1;
+    int totalPages = ViewBag.TotalPages ?? 1;
+
+    string NextDir(string field)
+    {
+        if (sortField == field)
+            return sortDir == "asc" ? "desc" : "asc";
+        return "asc";
+    }
+
+    string Arrow(string field)
+    {
+        if (sortField != field) return "";
+        return sortDir == "asc" ? " ▲" : " ▼";
+    }
+}
+
+<h1>Transactions</h1>
+
+<form method="get" class="mb-3">
+    <div class="row g-2 align-items-end">
+        <div class="col-sm-6 col-md-4">
+            <label class="form-label">Search by Payer Email</label>
+            <input name="searchEmail" value="@searchEmail" class="form-control" placeholder="example@email.com" />
+        </div>
+
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Search</button>
+            <a class="btn btn-outline-secondary"
+               asp-action="Index"
+               asp-route-sortField="@sortField"
+               asp-route-sortDir="@sortDir">Clear</a>
+        </div>
+    </div>
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Transaction ID</th>
+
+            <th>
+                <a asp-action="Index"
+                   asp-route-searchEmail="@searchEmail"
+                   asp-route-sortField="amount"
+                   asp-route-sortDir="@NextDir("amount")"
+                   asp-route-page="1">
+                    Amount Paid@Arrow("amount")
+                </a>
+            </th>
+
+            <th>Payer Email</th>
+
+            <th>
+                <a asp-action="Index"
+                   asp-route-searchEmail="@searchEmail"
+                   asp-route-sortField="date"
+                   asp-route-sortDir="@NextDir("date")"
+                   asp-route-page="1">
+                    Date@Arrow("date")
+                </a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TransactionId</td>
+                <td>@item.Amount</td>
+                <td>@item.PayerEmail</td>
+                <td>@item.CreatedAt.ToString("yyyy-MM-dd HH:mm")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (totalPages > 1)
+{
+    <nav aria-label="Transaction pages">
+        <ul class="pagination">
+            <li class="page-item @(page <= 1 ? "disabled" : "")">
+                <a class="page-link"
+                   asp-action="Index"
+                   asp-route-searchEmail="@searchEmail"
+                   asp-route-sortField="@sortField"
+                   asp-route-sortDir="@sortDir"
+                   asp-route-page="@(page - 1)">Prev</a>
+            </li>
+
+            @for (int p = 1; p <= totalPages; p++)
+            {
+                <li class="page-item @(p == page ? "active" : "")">
+                    <a class="page-link"
+                       asp-action="Index"
+                       asp-route-searchEmail="@searchEmail"
+                       asp-route-sortField="@sortField"
+                       asp-route-sortDir="@sortDir"
+                       asp-route-page="@p">@p</a>
+                </li>
+            }
+
+            <li class="page-item @(page >= totalPages ? "disabled" : "")">
+                <a class="page-link"
+                   asp-action="Index"
+                   asp-route-searchEmail="@searchEmail"
+                   asp-route-sortField="@sortField"
+                   asp-route-sortDir="@sortDir"
+                   asp-route-page="@(page + 1)">Next</a>
+            </li>
+        </ul>
+    </nav>
+}

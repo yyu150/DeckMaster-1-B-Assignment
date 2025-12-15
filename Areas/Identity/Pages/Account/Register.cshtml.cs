@@ -29,13 +29,24 @@ namespace DeckMaster.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<IdentityUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        
+        private readonly IConfiguration _config;
+        
+        private readonly HttpClient _httpClient;
+
+
+        public string ReCaptchaSiteKey { get; set; }
+
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
             IUserStore<IdentityUser> userStore,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            IConfiguration config,
+            HttpClient httpClient
+            )
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -43,6 +54,10 @@ namespace DeckMaster.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _config = config;
+            _httpClient = httpClient;
+
+
         }
 
         /// <summary>
@@ -104,10 +119,38 @@ namespace DeckMaster.Areas.Identity.Pages.Account
         {
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+            ReCaptchaSiteKey = _config["GoogleReCaptcha:SiteKey"];
+
         }
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
+            var recaptchaResponse = Request.Form["g-recaptcha-response"];
+
+            if (string.IsNullOrEmpty(recaptchaResponse))
+            {
+                ModelState.AddModelError(string.Empty, "Please complete the reCAPTCHA.");
+                return Page();
+            }
+
+            var secretKey = _config["GoogleReCaptcha:SecretKey"];
+
+            var verificationUrl =
+                $"https://www.google.com/recaptcha/api/siteverify?secret={secretKey}&response={recaptchaResponse}";
+
+            var response = await _httpClient.PostAsync(verificationUrl, null);
+            var json = await response.Content.ReadAsStringAsync();
+
+            var captchaResult =
+                System.Text.Json.JsonSerializer.Deserialize<DeckMaster.Models.ReCaptchaResponse>(json);
+
+            if (captchaResult == null || !captchaResult.success)
+            {
+                ModelState.AddModelError(string.Empty, "reCAPTCHA verification failed.");
+                return Page();
+            }
+
+            
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)

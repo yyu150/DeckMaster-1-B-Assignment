@@ -1,0 +1,19 @@
+@model DeckMaster.ViewModels.UserRoleVM
+@{ ViewData["Title"] = "Remove User Role"; }
+
+<h1>Remove User Role</h1>
+<hr />
+
+<h4 class="text-danger">
+    Are you sure you want to remove <strong>@Model.RoleName</strong> from <strong>@Model.Email</strong>?
+</h4>
+
+<form asp-action="DeleteConfirmed" method="post">
+    @Html.AntiForgeryToken()
+    
+    <input type="hidden" asp-for="Email"/>
+    <input type="hidden" asp-for="RoleName"/>
+
+    <button type="submit" class="btn btn-danger">Confirm Remove Role</button>
+    <a asp-action="Detail" asp-route-userName="@Model.Email" class="btn btn-secondary">Cancel</a>
+</form>

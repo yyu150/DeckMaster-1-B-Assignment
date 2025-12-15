@@ -17,73 +17,113 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = DeckMaster
 build_property.RootNamespace = DeckMaster
-build_property.ProjectDir = /Users/yantongyu/Downloads/DeckMaster - Start/
+build_property.ProjectDir = /Users/yantongyu/Downloads/DeckMaster - 1-B(1)/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/yantongyu/Downloads/DeckMaster - Start
+build_property.MSBuildProjectDirectory = /Users/yantongyu/Downloads/DeckMaster - 1-B(1)
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[/Users/yantongyu/Downloads/DeckMaster - Start/Areas/Identity/Pages/Account/Login.cshtml]
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/yantongyu/Downloads/DeckMaster - Start/Areas/Identity/Pages/Account/Register.cshtml]
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/yantongyu/Downloads/DeckMaster - Start/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9SZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvQWNjb3VudC9fVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/yantongyu/Downloads/DeckMaster - Start/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/yantongyu/Downloads/DeckMaster - Start/Areas/Identity/Pages/_ViewImports.cshtml]
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/yantongyu/Downloads/DeckMaster - Start/Areas/Identity/Pages/_ViewStart.cshtml]
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXMvSWRlbnRpdHkvUGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/yantongyu/Downloads/DeckMaster - Start/Views/Home/Index.cshtml]
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/yantongyu/Downloads/DeckMaster - Start/Views/Shared/Error.cshtml]
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/Roles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUm9sZXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/Roles/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUm9sZXMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/Roles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUm9sZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/yantongyu/Downloads/DeckMaster - Start/Views/Shared/_LoginPartial.cshtml]
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/yantongyu/Downloads/DeckMaster - Start/Views/Shared/_Shop.cshtml]
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/Shared/_Shop.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19TaG9wLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/yantongyu/Downloads/DeckMaster - Start/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/yantongyu/Downloads/DeckMaster - Start/Views/Shop/Index.cshtml]
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/Shop/Confirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcC9Db25maXJtYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/Shop/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hvcC9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/yantongyu/Downloads/DeckMaster - Start/Views/_ViewImports.cshtml]
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/Transactions/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhbnNhY3Rpb25zL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/Users/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/Users/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/Users/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlcnMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/yantongyu/Downloads/DeckMaster - Start/Views/_ViewStart.cshtml]
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/yantongyu/Downloads/DeckMaster - Start/Views/Shared/_Layout.cshtml]
+[/Users/yantongyu/Downloads/DeckMaster - 1-B(1)/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-efwwo6j0lz

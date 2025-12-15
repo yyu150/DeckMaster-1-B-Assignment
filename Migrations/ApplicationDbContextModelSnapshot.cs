@@ -77,6 +77,35 @@ namespace DeckMaster.Migrations
                         });
                 });
 
+            modelBuilder.Entity("DeckMaster.Models.Transaction", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("AmountPaid")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Currency")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PayPalTransactionId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PayerEmail")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PayerName")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Transactions");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")

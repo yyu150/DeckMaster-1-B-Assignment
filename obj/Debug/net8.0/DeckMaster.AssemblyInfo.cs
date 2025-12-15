@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DeckMaster")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f333e8fe1a93a13656d0815b7f57227cc3522c2f")]
 [assembly: System.Reflection.AssemblyProductAttribute("DeckMaster")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DeckMaster")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
