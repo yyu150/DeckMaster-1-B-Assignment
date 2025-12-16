@@ -11,8 +11,7 @@ namespace DeckMaster.Repositories
         {
             _context = context;
         }
-
-        // Get specific product in the database.
+        
         public ProductVM? GetProduct(int id)
         {
             ProductVM? product = _context.Products.Select(p => new ProductVM
@@ -27,8 +26,7 @@ namespace DeckMaster.Repositories
 
             return product;
         }
-
-        // Get all products in the database.
+        
         public IEnumerable<ProductVM> GetAllProducts()
         {
             IEnumerable<ProductVM> products = _context.Products.Select(p => new ProductVM

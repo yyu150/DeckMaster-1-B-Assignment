@@ -36,7 +36,7 @@ namespace DeckMaster.Controllers
 
             // Sorting 
             sortField = string.IsNullOrWhiteSpace(sortField) ? "date" : sortField.ToLower();
-            sortDir = string.IsNullOrWhiteSpace(sortDir) ? "desc" : sortDir.ToLower(); // default newest first
+            sortDir = string.IsNullOrWhiteSpace(sortDir) ? "desc" : sortDir.ToLower(); 
 
             bool asc = sortDir == "asc";
 
