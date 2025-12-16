@@ -19,14 +19,14 @@ namespace DeckMaster.Controllers
             _roleRepo = roleRepo;
         }
 
-        // List all users
+        // List users
         public IActionResult Index()
         {
             var users = _userRepo.GetAllUsers();
             return View(users);
         }
 
-        // Show roles for a user
+        // Show user roles
         public async Task<IActionResult> Detail(string userName, string message = "")
         {
             ViewBag.UserName = userName;
